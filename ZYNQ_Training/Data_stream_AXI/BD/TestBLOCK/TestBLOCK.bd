@@ -1,0 +1,295 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x451EE10DED244654",
+      "device": "xc7z020clg400-1",
+      "name": "TestBLOCK",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "sample_generator_0": ""
+    },
+    "interface_ports": {
+      "S_AXIS": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "TestBLOCK_s_axis_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "1"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "S_AXIS_tdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "TSTRB": {
+            "physical_name": "S_AXIS_tstrb",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "TLAST": {
+            "physical_name": "S_AXIS_tlast",
+            "direction": "I"
+          },
+          "TVALID": {
+            "physical_name": "S_AXIS_tvalid",
+            "direction": "I"
+          },
+          "TREADY": {
+            "physical_name": "S_AXIS_tready",
+            "direction": "O"
+          }
+        }
+      },
+      "M_AXIS": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "TestBLOCK_s_axis_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "1",
+            "value_src": "auto_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4",
+            "value_src": "auto_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "M_AXIS_tdata",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "TSTRB": {
+            "physical_name": "M_AXIS_tstrb",
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "TLAST": {
+            "physical_name": "M_AXIS_tlast",
+            "direction": "O"
+          },
+          "TVALID": {
+            "physical_name": "M_AXIS_tvalid",
+            "direction": "O"
+          },
+          "TREADY": {
+            "physical_name": "M_AXIS_tready",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "FrameSize": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "En": {
+        "direction": "I"
+      },
+      "AXI_En": {
+        "direction": "I"
+      },
+      "s_axis_aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXIS:M_AXIS",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "s_axis_aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "TestBLOCK_s_axis_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "s_axis_aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "sample_generator_0": {
+        "vlnv": "Home:user:sample_generator:1.0",
+        "xci_name": "TestBLOCK_sample_generator_0_1",
+        "xci_path": "ip\\TestBLOCK_sample_generator_0_1\\TestBLOCK_sample_generator_0_1.xci",
+        "inst_hier_path": "sample_generator_0"
+      }
+    },
+    "interface_nets": {
+      "S_AXIS_1": {
+        "interface_ports": [
+          "sample_generator_0/S_AXIS",
+          "S_AXIS"
+        ]
+      },
+      "sample_generator_0_M_AXIS": {
+        "interface_ports": [
+          "sample_generator_0/M_AXIS",
+          "M_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "AXI_En_1": {
+        "ports": [
+          "AXI_En",
+          "sample_generator_0/AXI_En"
+        ]
+      },
+      "En_1": {
+        "ports": [
+          "En",
+          "sample_generator_0/En"
+        ]
+      },
+      "FrameSize_1": {
+        "ports": [
+          "FrameSize",
+          "sample_generator_0/FrameSize"
+        ]
+      },
+      "s_axis_aclk_1": {
+        "ports": [
+          "s_axis_aclk",
+          "sample_generator_0/s_axis_aclk",
+          "sample_generator_0/m_axis_aclk"
+        ]
+      },
+      "s_axis_aresetn_1": {
+        "ports": [
+          "s_axis_aresetn",
+          "sample_generator_0/s_axis_aresetn",
+          "sample_generator_0/m_axis_aresetn"
+        ]
+      }
+    }
+  }
+}

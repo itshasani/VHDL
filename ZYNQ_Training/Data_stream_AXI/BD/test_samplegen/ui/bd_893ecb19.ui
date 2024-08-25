@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-338,-158",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x -50 -y -110 -defaultsOSRD
+preplace port M_AXIS -pg 1 -lvl 2 -x 270 -y 30 -defaultsOSRD
+preplace port port-id_En -pg 1 -lvl 0 -x -50 -y -50 -defaultsOSRD
+preplace port port-id_AXI_En -pg 1 -lvl 0 -x -50 -y -20 -defaultsOSRD
+preplace port port-id_s_axis_aclk -pg 1 -lvl 0 -x -50 -y 40 -defaultsOSRD
+preplace port port-id_s_axis_aresetn -pg 1 -lvl 0 -x -50 -y 10 -defaultsOSRD
+preplace portBus FrameSize -pg 1 -lvl 0 -x -50 -y -80 -defaultsOSRD
+preplace inst sample_generator_0 -pg 1 -lvl 1 -x 130 -y 10 -defaultsOSRD
+preplace netloc FrameSize_1 1 0 1 -10 -80n
+preplace netloc En_1 1 0 1 -20 -50n
+preplace netloc AXI_En_1 1 0 1 -30 -20n
+preplace netloc s_axis_aclk_1 1 0 1 -20 20n
+preplace netloc s_axis_aresetn_1 1 0 1 10 10n
+preplace netloc S_AXIS_1 1 0 1 0 -110n
+preplace netloc sample_generator_0_M_AXIS 1 1 1 250 10n
+levelinfo -pg 1 -50 130 270
+pagesize -pg 1 -db -bbox -sgen -190 -160 370 260
+"
+}
+

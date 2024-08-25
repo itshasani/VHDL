@@ -134,7 +134,7 @@ sample_generator_v1_0_M_AXIS_inst : sample_generator_v1_0_M_AXIS
 		m_axis_tlastw;
 	m_axis_tvalid <= s_axis_tvalid when AXI_En = '1' else
 		m_axis_tvalidw;
-	
+	s_axis_tready <= m_axis_tready;
 
 	-- User logic ends
 
